@@ -1,0 +1,202 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.sombra {
+    color: white;
+    text-shadow: 2px 2px 5px white;
+}
+
+body {
+    background-image: url(../Prestadores/login.png);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Cor da caixa do login*/
+.main {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 10em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px black; /* Sombra atras da caixa */
+    center;
+}
+
+.main2 {
+    background-color: transparent;
+    width: 600px;
+    margin: 10em auto;
+    border-radius: 1.5em;
+}
+
+
+/* Cor e Fonte da letra Login */
+.sign {
+    padding-top: 40px;
+    color: #1d2629;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+/* caixa do login e da senha */
+.logininputs {
+    width: 76%;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: transparent;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #1d2629;
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*Caixa topo */
+form.form1 {
+    padding-top: 20px;
+}
+
+
+.logininputs:focus {
+    border: 2px solid red !important; /* cor das laterais da caixa de login e de senha dps que clica para digitar dentro delas */
+}
+
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    padding-top: 20px;
+}
+
+/* letras de esqueci a senha e criar conta */
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: black;
+    text-decoration: none
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}
+
+.container-fluid {
+    padding: 10px 100px;
+    color: black;
+}
+
+
+.button {
+    background: linear-gradient(to right,#4285f4,#8BB5F8,#4285f4);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0.5em;
+    padding: 0 4em;
+    margin-bottom: 50px;
+    margin-left: 30%;
+    text-align: center;
+    margin-bottom: 2px;
+    position: relative;
+    overflow: hidden;
+    line-height: 35px;
+    border-radius: 10em;
+    cursor: pointer;
+}
+
+
+    .button::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        bottom: -50%;
+        left: -60%;
+        background: linear-gradient(to bottom, rgba(229, 172, 142, 0), white 50%, rgba(229, 172, 142, 0));
+        transform: rotateZ(60deg) translate(-5em, 7.5em);
+    }
+
+    .button:hover::after, button:focus::after {
+        animation: sheen 1s forwards;
+    }
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
+}
+
+.main3 {
+    height: 100vh;
+    width: 100vw;
+    box-shadow: inset 0px 0px 2em gray;
+}
+
+.typing {
+    font-family: 'Special Elite', cursive;
+    font-size: 2em;
+    padding: 1em;
+}
+
+
+/*Mudar cor do Placeholder */
+/* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+    color: black;
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+    color: black;
+}
+/* IE 10+ */
+:-ms-input-placeholder {
+    color: black;
+}
+/* Firefox 18- */
+:-moz-placeholder {
+    color: black;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-image: url(../Prestadores/ferramentasCelular.png);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .main {
+        background-color: white;
+        width: 300px;
+        height: 300px;
+        margin: 8em;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px black; /* Sombra atras da caixa */
+    }
+
+    .main2 {
+        margin: auto auto;
+        border-radius: 1.5em;
+    }
+
+    h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="IdealService.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="shortcut icon" href="IdealService/IdealService.PNG" >
+    <link href="Css/style.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="Css/master.css">
+    <title>IdealService</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark cor">
+        <a class="navbar-brand" href="SelecionarPrestador.aspx"><img src="IdealService/IdealService.PNG" width="70 px" height="35px" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado"
+            aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item ">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplCidade" NavigateUrl="DigiteOCEP.aspx" Text="Contrate" />
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplAnuncie" NavigateUrl="CriarAnuncio.aspx" Text="Anuncie" Visible="false" />
+                </li>
+            </ul>
+            <ul class="navbar-nav justify-content-center">
+                 <li class="nav-item" style="padding-right: 10px;">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplistagemdeconta" NavigateUrl="ListagemDeConta.aspx" Text="Página Listagem" Visible="false" />
+                </li>
+                <li class="nav-item" style="padding-right: 10px;">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplADM" NavigateUrl="PADM.aspx" Text="Página ADM" Visible="false" />
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" style="padding-right: 10px;">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplMeusAnuncios" NavigateUrl="MeusAnuncios.aspx" Text="Meus Anúncios" Visible="false" />
+                </li>
+                <li class="nav-item" style="padding-right: 10px;">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplEditarConta" NavigateUrl="EditarConta.aspx" Text="Perfil"/>
+                </li>
+                <li class="nav-item" style="padding-right: 10px;">
+                    <asp:HyperLink runat="server" CssClass="nav-link" ID="hplSair" NavigateUrl="Sair.aspx" Text="Sair" />
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!-- Footer -->
+    <footer class="page-footer cor navbar">
+        <br />
+        <br />
+        <div class="container text-center ">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <br />
+                    <h6 class="text-uppercase font-weight-bold">Sobre nós</h6>
+                    <hr class="bg-primary mb-3 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px" />
+                    <p class="text-md-left">
+                        Se você está a procura de algum tipo de serviço ou quer anunciar seu trabalho, você chegou ao lugar certo, bem vindo ao IdealService.
+                    </p>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <br />
+                    <h6 class="text-uppercase font-weight-bold">Geral</h6>
+                    <hr class="bg-primary mb-3 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px" />
+                    <p><a href="QuemSomos.aspx">Quem somos</a></p>
+                    <p><a href="CentralDeAjuda.aspx">FAQ e Suporte</a></p>
+                    <p>IdealService, Copyright @ 2021, Inc.</p>
+
+                </div>
+                <div class="col-md-4 mx-auto mb-4">
+                    <br />
+                    <h6 class="text-uppercase font-weight-bold">Contato</h6>
+                    <hr class="bg-primary mb-3 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px" />
+                    <ul class="list-unstyled">
+                        <li class="my-2"><i class="fas fa-home mr-2"></i>Ribeirão Preto-SP, Brasil</li>
+                        <li class="my-2"><i class="fas fa-envelope mr-2"></i>idealservicetcc@gmail.com</li>
+                        <li class="my-2"><i class="fas fa-phone"></i> +55 (16) 99643-3581</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!--JQuerry primeiro, depois Popper.js, depois Bootstrap.js -->
+        <script src="Scripts/jquery-3.0.0.slim.min.js"></script>
+        <script src="Scripts/esm/popper.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>
